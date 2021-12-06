@@ -1,0 +1,31 @@
+1. Ter python 3.x instalado no computador
+	https://www.python.org/ftp/python/3.9.9/python-3.9.9-amd64.exe
+
+2. abrir um terminal e correr os seguintes comandos
+	pip install pyautogui
+	pip install Pillow
+
+3. Descarregar VLC
+	https://www.videolan.org/vlc/download-windows.html
+
+4. Adicionar VLC as variaveis do sistema
+	ver video (por fazer)
+
+5. Configurar VLC
+	meter a tocar em full screen e escolher o monitor de output
+		1.jpeg
+	meter para fechar automaticamente
+		show settings: all
+		search: play and exit
+		na opcao playlist
+	meter para start on top
+		show settings: all
+		search: always on top
+		na opcao video
+
+6. Desacrregar todos os hinos para a pasta "cantados"
+
+7. abrir um terminal na pasta e correr:
+	python server.py
+
+8. fazer scan do codigo qr para abrir a pagina
