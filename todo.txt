@@ -1,0 +1,42 @@
+
+Instrucoes:
+    instrucoes para instlar pytohn
+        meter uma imagem a relembrar a pessoa que tem de carregar na funcao de add to system path
+    na parte do pip tenho de adicionar estes dois packages
+        websockets instalar qrcode
+    meter as configuracoes em portugues
+    na parte das settings do vlc:
+        tirar continuar onde deixou
+    ver se nao tenho maneira de mudar as settings do vlc automaticamente
+
+app browser:
+    tirar o 500 default na app
+    trocar os botoes de volumes um com o outro
+    trocar botoes de lugar, apagar e enter
+    mensagens no browser para portugues
+    meter um botao para parar o hino
+
+
+server python:
+    na procura de videos, mudar de mp4 para mkv
+
+    os.path.join quando estou a criar a lista de ficheiros
+    dar sort a list de ficheiros
+    quando estou a escolher e message -1
+
+    fazer um interface para o server
+        para a pessoas saber se esta a correr
+        poder reiniciar, parar e comecar o server
+        para poder trocar entre instrumentos e cantado
+
+random:
+    adicionar uma maneira da pessoa poder dizer que o hino esta mau
+
+hinos:
+    305, 303, 302, 300, 301, 110, 101, 102, 103, 104, 105, 106, 107
+        tenho de cortar todos
+    falta o 100
+
+    ta tudo mal na drive...
+
+

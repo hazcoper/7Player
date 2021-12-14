@@ -4,7 +4,7 @@
 2. abrir um terminal e correr os seguintes comandos
 	pip install pyautogui
 	pip install Pillow
-
+	pip install websockets
 3. Descarregar VLC
 	https://www.videolan.org/vlc/download-windows.html
 
