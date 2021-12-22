@@ -76,13 +76,13 @@ function messageParser(event){
     console.log("A new message has been received: ", event.data);
     
     if (event.data === "accepted"){
-        mypredict.text = "Starting music";
+        mypredict.text = "Começando música";
     }
     else if(event.data === "volumechange"){
         console.log("volume has been changed");
     }
     else{
-        mypredict.text = "Selection not valid";
+        mypredict.text = "Seleção não válida";
     }
 
     // connection.close();
@@ -187,7 +187,7 @@ class PredictBox{
     constructor(x, y, sizex, sizey){
         this.pos = createVector(x,y);
         this.size = createVector(sizex, sizey);
-        this.text = "500";
+        this.text = "";
         
         var textMarginP = 2;
         this.textMarginX = this.size.x * textMarginP / 100
@@ -326,7 +326,7 @@ function setup() {
     var _predictY = _keyPadY - _predictYSize - _yMarginS;
 
     mykeypad = new KeyPad(_keypadX, _keyPadY, _keypadXSize, _keypadYSize, 10, 10, 15);
-    mykeypad.setCharList(['🔊', '🔉', 0, 49, 50, 51, 52, 53, 54, 55, 56, 57, 9166, 48, 9003]);
+    mykeypad.setCharList([ '🔉', '🔊', 0, 49, 50, 51, 52, 53, 54, 55, 56, 57, 9003, 48, 9166]);
     mypredict = new PredictBox(_predictX, _predictY, _predictXSize, _predictYSize);
 }
 

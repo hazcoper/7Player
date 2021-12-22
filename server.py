@@ -1,17 +1,18 @@
 
 import os
+import re
 import sys
 import socket
 import signal
 import asyncio
 import subprocess
-import websockets
 import http.server
 import multiprocessing
 
+from PIL import Image
+import websockets
 import pyautogui
 import qrcode
-from PIL import Image
 
 def signal_handler(sig, frame):
     print("Sinal para fechar foi recebido")
@@ -33,11 +34,10 @@ def GenerateQr(data):
     im.show()
 
 
-
-#vou querer ver o meu ip
-#vou querer lancar um thread para o web server
-#vou querer mostrar um qr code para ligar ao site
-
+def sorted_alphanumeric(data):
+    convert = lambda text: int(text) if text.isdigit() else text.lower()
+    alphanum_key = lambda key: [ convert(c) for c in re.split('([0-9]+)', key) ] 
+    return sorted(data, key=alphanum_key)
 
 
 async def echo(websocket, path):
@@ -54,7 +54,7 @@ async def echo(websocket, path):
         elif int(message) < len(fileList):
             print("sending message accepted")
             name = await websocket.send(f"accepted")
-            p = subprocess.Popen(["vlc", fileList[int(message)]])
+            p = subprocess.Popen(["vlc", fileList[int(message)-1]])
         else:
             print("sending message failsd")
             name = await websocket.send(f"failed")
@@ -85,8 +85,8 @@ if __name__ == "__main__":
     global myServer
 
     signal.signal(signal.SIGINT, signal_handler)
-    fileList = [x for x in os.listdir("cantados") if x.split(".")[-1] == "mp4"]
-    
+    fileList = [os.path.join("cantados", x) for x in os.listdir("cantados") if x.split(".")[-1] == "mp4" or x.split(".")[-1] == "mkv"]
+    fileList = sorted_alphanumeric(fileList)    
 
     print("Starting server")
 

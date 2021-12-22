@@ -5,6 +5,9 @@
 	pip install pyautogui
 	pip install Pillow
 	pip install websockets
+	pip install qrcode
+
+
 3. Descarregar VLC
 	https://www.videolan.org/vlc/download-windows.html
 
