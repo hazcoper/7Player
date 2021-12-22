@@ -1,4 +1,3 @@
-
 import os
 import re
 import sys
@@ -47,14 +46,21 @@ async def echo(websocket, path):
 
         # proc = subprocess.Popen(f"vlc {fileList[int(message)]}", stdin = subprocess.PIPE, stdout = subprocess.PIPE)
         # os.system(f"vlc {fileList[int(message)]}")
+        
         if not message.isdigit():
-            #quer dizer que nao e um numero, entao vai ser volume up or volume down
+            #quer dizer que nao e um numero, entao vai ser volume up or volume down ou stop
+            if message == "stop":
+                p = subprocess.Popen(["TASKKILL", "/IM", "vlc.exe"])
+                name = await websocket.send(f"video has stopped")
+                return
             pyautogui.press(message)
             name = await websocket.send(f"volumechange")
+        
         elif int(message) < len(fileList):
             print("sending message accepted")
             name = await websocket.send(f"accepted")
             p = subprocess.Popen(["vlc", fileList[int(message)-1]])
+        
         else:
             print("sending message failsd")
             name = await websocket.send(f"failed")

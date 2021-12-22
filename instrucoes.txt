@@ -1,4 +1,5 @@
 1. Ter python 3.x instalado no computador
+	olhar imagem 1.jpeg
 	https://www.python.org/ftp/python/3.9.9/python-3.9.9-amd64.exe
 
 2. abrir um terminal e correr os seguintes comandos
@@ -16,7 +17,9 @@
 
 5. Configurar VLC
 	meter a tocar em full screen e escolher o monitor de output
-		1.jpeg
+		2.jpeg
+	meter para nao aparecer a opcao de continue playback
+		3.jpeg
 	meter para fechar automaticamente
 		show settings: all
 		search: play and exit

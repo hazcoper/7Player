@@ -226,7 +226,7 @@ class PredictBox{
         if(value == 9003){
             //this is delete
             if(this.text.length < 1) return;
-            if(this.text === "Starting music" || this.text === "Selection not valid") return;
+            if(this.text === "Começando música" || this.text === "Seleção não válida") return;
         
             this.text = this.text.slice(0, -1);
             return;
@@ -248,11 +248,16 @@ class PredictBox{
             sendData("volumedown");
             return
         }
+        if(value == '🚫'){
+            sendData("stop");
+            return
+        }
+
         if(value == 101){
             return  
         }
 
-        if(this.text === "Starting music" || this.text === "Selection not valid") this.text = "";
+        if(this.text === "Começando música" || this.text === "Seleção não válida") this.text = "";
         this.text += String.fromCharCode(value);
     }
 }
@@ -326,7 +331,7 @@ function setup() {
     var _predictY = _keyPadY - _predictYSize - _yMarginS;
 
     mykeypad = new KeyPad(_keypadX, _keyPadY, _keypadXSize, _keypadYSize, 10, 10, 15);
-    mykeypad.setCharList([ '🔉', '🔊', 0, 49, 50, 51, 52, 53, 54, 55, 56, 57, 9003, 48, 9166]);
+    mykeypad.setCharList([ '🔉', '🔊', '🚫', 49, 50, 51, 52, 53, 54, 55, 56, 57, 9003, 48, 9166]);
     mypredict = new PredictBox(_predictX, _predictY, _predictXSize, _predictYSize);
 }
 
