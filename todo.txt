@@ -1,29 +1,50 @@
 
-Instrucoes:
-    meter as configuracoes em portugues
-    na parte das settings do vlc:
-        tirar continuar onde deixou
-    ver se nao tenho maneira de mudar as settings do vlc automaticamente
 
-app browser:
-    meter um botao para parar o hino
-        trocar o layout, diminuir o text box para adicionar mais botoes
+resolvido:
+    Instrucoes:
+        meter as configuracoes em portugues
+        na parte das settings do vlc:
+            tirar continuar onde deixou
 
-server python:
+    app browser:
+        meter um botao para parar o hino
+            trocar o layout, diminuir o text box para adicionar mais botoes
 
-    fazer um interface para o server
-        para a pessoas saber se esta a correr
-        poder reiniciar, parar e comecar o server
-        para poder trocar entre instrumentos e cantado
 
-random:
-    adicionar uma maneira da pessoa poder dizer que o hino esta mal
 
-hinos:
-    305, 303, 302, 300, 301, 110, 101, 102, 103, 104, 105, 106, 107
-        tenho de cortar todos
-    falta o 100
 
-    ta tudo mal na drive...
+    hinos:
+        305, 303, 302, 300, 301, 110, 101, 102, 103, 104, 105, 106, 107
+            tenho de cortar todos
+        falta o 100
+
+        ta tudo mal na drive...
+
+
+
+por fazer:
+    ver como mudar as settings do vlc automaticamente
+    ver como adicionar automaticamente o vlc ao path
+
+    server python:
+        fazer um interface para o server
+            para a pessoas saber se esta a correr
+            poder reiniciar, parar e comecar o server
+            para poder trocar entre instrumentos e cantado
+
+    random:
+        adicionar uma maneira da pessoa poder dizer que o hino esta mal
+
+
+
+
+
+
+vamos converter isto para usar um server de flask
+    depois vai ser um programa de python a correr
+
+    vou ter de adicionar as dependencias
+
+tenho de verificar se nao estou a pedir uma musica que nao tenho
 
 

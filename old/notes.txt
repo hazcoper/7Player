@@ -1,0 +1,4 @@
+this is the old version of the controller, where the http server would run in a different process from the controlling server
+
+sometimes for some reason the http server would not start...
+this was changed to use flask

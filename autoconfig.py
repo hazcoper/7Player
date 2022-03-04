@@ -1,5 +1,7 @@
 """
 Script that will configure vlc automatically
+
+still a work in progress ...
 """
 import os
 
