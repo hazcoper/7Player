@@ -60,6 +60,8 @@ def startMusic(path):
 
 def changeVolume(increment):
     message = "volumeup" if increment > 0 else "volumedown" 
-    for x in range(increment):
+
+    increment = abs(increment)
+    for _ in range(increment):
         pyautogui.press(message)
-        time.sleep(0.1)
+        time.sleep(0.005)
