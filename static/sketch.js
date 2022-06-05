@@ -266,9 +266,22 @@ function viewport(){
     return { width : e[ a+'Width' ] , height : e[ a+'Height' ] }
 }
 
+function mouseCallback(event){
 
+    var value = mykeypad.checkHit(event.offsetX, event.offsetY);
+    
+    if (value === null){
+        return;
+    }
+    
+    
+    mypredict.add(value);
+
+}
 
 function setup() {
+
+    document.addEventListener("click", mouseCallback);
 
     // get the screeen dimensions
     viewport();
@@ -316,18 +329,20 @@ function setup() {
 }
 
 
-function mouseClicked(event) {
+// old function to deal with mouse click, does not work with safari
+// function mouseClicked(event) {
+//     console.log(mouseX, mouseY);
+//     var value = mykeypad.checkHit(mouseX, mouseY);
     
-    var value = mykeypad.checkHit(mouseX, mouseY);
-    
-    if (value === null){
-        return;
-    }
+//     if (value === null){
+//         return;
+//     }
     
     
-    mypredict.add(value);
+//     mypredict.add(value);
 
-}
+// }
+
 
 function draw() {
     // background(0, 30);
