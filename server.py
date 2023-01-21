@@ -20,6 +20,9 @@ def home():
 @app.route("/start/<number>")
 def startPlaying(number):
     print(f"Should start this music {number}")
+    if int(number) > len(fileList):
+        print(f"  Requested music {number} does not exist")
+        return("failed")
     path = fileList[int(number) - 1]
 
     if startMusic(path):
