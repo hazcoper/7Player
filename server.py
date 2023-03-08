@@ -1,6 +1,7 @@
 from flask import Flask, render_template, url_for, send_from_directory
 from funcs import GetIp, GenerateQr, sorted_alphanumeric, stopMusic, startMusic, changeVolume
 
+import sys
 import os
 
 
@@ -56,6 +57,10 @@ def send_static(path):
 
 if __name__ == '__main__':
     
+
+    print("UI pid - ", sys.argv[1])
+    exit()
+
     fileList = [os.path.join("cantados", x) for x in os.listdir("cantados") if x.split(".")[-1] == "mp4" or x.split(".")[-1] == "mkv"]
     fileList = sorted_alphanumeric(fileList)  
     

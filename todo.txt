@@ -42,3 +42,25 @@ por fazer:
 
 
 
+
+creating simple ui
+
+preciso de fazer uma coisa que
+    lanca flask server
+    lanca ui
+
+    capacidades ui
+        tem de conseguir desligar o server
+        tem de conseguir dar restart ao server
+        tem de conseguir poke o server
+            
+
+        para isto vou ter o pid do server
+        o server tambem tem que ter o pid
+    
+    primeiro preciso fazer a cena que da launch aos dois proecssos
+    having both way communication is not very convenient
+        will need to find another way to chekc if the serevr is open, should not be hard
+
+
+    
